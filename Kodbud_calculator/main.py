@@ -6,16 +6,16 @@ try:
     o = input("Enter your operation: ") 
     match o:
         case "+":
-            print(f"The result = {a+b} ") 
+            print(f"The result = {abs(a+b)} ") 
             
         case "-":
-            print(f"The result = {a-b} ") 
+            print(f"The result = {abs(a-b)} ") 
             
         case "/": 
-            print(f"The result = {a/b} ") 
+            print(f"The result = {abs(a/b)} ") 
             
         case "*":
-            print(f"The result = {a*b} ")  
+            print(f"The result = {abs(a*b)} ")  
             
         case default: 
             print(f"There was an error")
