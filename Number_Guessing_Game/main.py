@@ -1,18 +1,19 @@
-num = int(input("Enter your favourite number: ")) 
-print("Number must be between 1 to 100")
+import random
 
-count = 0
-for i in range(0, 101) :
-    if num > i :
+secret = random.randint(1, 100)
+count = 0 
+
+while True:
+    num = int(input("Enter your favourite number (1-100): ")) 
+    count += 1
+    if num > secret:
         print("Too high") 
-        count += 1
         
-    elif num < i :
+    elif num < secret:
         print("Too low") 
-        count += 1
         
-    elif num == i :
-        print(i) 
-        count += 1 
-    print(count)
+    else: 
+        print("Correct! you guessed it") 
+        break 
     
+print(f"Total attempts = {count}")
